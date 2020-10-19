@@ -74,6 +74,7 @@ function Signup(props) {
                   placeholder="Password"
                   ref={register}
                 />
+
               </label>
             </div>
             <button className="ui primary button login" type="submit">
