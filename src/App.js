@@ -11,6 +11,7 @@ import { Profile } from "./pages/Profile";
 
 import { UserProvider } from "./firebase/UserProvider";
 import ProfileRedirect from "./routes/ProfileRedirect";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Switch>
               <ProfileRedirect exact path="/signup" component={Signup} />
               <ProfileRedirect exact path="/login" component={Login} />
-              <Route exact path="/profile/:id" component={Profile} />
+              <PrivateRoute exact path="/profile/:id" component={Profile} />
               <Route exact path="/"><Redirect to="/login"/></Route>
             </Switch>
           </div>
